@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <script src="/js/validationPass.js"></script>
+  </head>
+  <body>
+    <%- include("./partials/nav") %>
+    <div
+      class="d-flex justify-content-around align-items-center"
+      style="height: 100vh; width: 98vw;"
+    >
+      <div class="row justify-content-around">
+        <div class="d-flex align-items-center col-sm-5 text-center">
+          <h1 style="font-size: 60px"><b>Create your password</b></h1>
+        </div>
+        <div class="col-sm-5">
+          <div class="form-group p-2">
+            <form method="POST" action="/mypass" class="form-group">
+              <div class="form-group-item">
+                <label for="name">Name</label>
+                <input class="form-control" name="name" id="name" required />
+              </div>
+              <div class="form-group-item">
+                <label for="description">Description</label>
+                <textarea
+                  class="form-control"
+                  col="5"
+                  row="2"
+                  name="description"
+                  id="description"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="length">Length: </label>
+                <output>25</output>
+                <input
+                  class="form-range"
+                  name="length"
+                  id="length"
+                  type="range"
+                  min="5"
+                  max="45"
+                  step="1"
+                  oninput="this.previousElementSibling.value = this.value"
+                />
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="min">Minus </label>
+                <input
+                  class="form-check-input"
+                  name="min"
+                  id="min"
+                  type="checkbox"
+                />
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="max">Mayus </label>
+                <input
+                  class="form-check-input"
+                  name="max"
+                  id="max"
+                  type="checkbox"
+                />
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="symbols"
+                  >Symbols
+                  <small class="text-secondary">Example(@#$"%&amp;=)</small>
+                </label>
+                <input
+                  class="form-check-input"
+                  name="symbols"
+                  id="symbols"
+                  type="checkbox"
+                />
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="numbers">Numbers </label>
+                <input
+                  class="form-check-input"
+                  name="numbers"
+                  id="numbers"
+                  type="checkbox"
+                />
+              </div>
+              <input
+                type="submit"
+                class="btn btn-primary mt-4 justify-self-end"
+                id="btnpass"
+                value="Create"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

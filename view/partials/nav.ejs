@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+    <ul class="nav justify-content-start">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mypass">Create Pass</a>
+        </li>
+        <% if (user) { %>
+        </ul>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="btn btn-danger mx-4" href="/logout">Log out</a>
+          </li>
+        </ul>
+        <% } else {%>
+        </ul>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Signup</a>
+            </li>
+          </ul>
+        <% } %>
+</nav>
