@@ -1,4 +1,4 @@
-# Password Generator
+# Password Generator (ES-EN)
 
 Aplicación de generador de contraseñas utilizando Express.js, MySQL y renderizado con EJS (Embedded Javascript Template).
 
